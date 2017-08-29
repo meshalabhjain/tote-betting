@@ -62,7 +62,3 @@ Dividends are shown following format on the results page
 **For example**:
 
 W:2:$2.61 # Win bet on horse 2 yields $2.61
-P:2:$1.06 # Place bet on horse 2 yields $1.06
-P:3:$1.27 # Place bet on horse 3 yields $1.27
-P:1:$2.13 # Place bet on horse 1 yields $2.13
-E:2,3:$2.43 # Exacta on horses 2,3 yields $2.43
