@@ -25,22 +25,29 @@ describe("Running tests for bet validator", function() {
     });
 
 
-    it("should throw error when selction value is not the positive integer", function(done) {
+    it("should throw error when selection value is not the positive integer", function(done) {
+       validate("E","0,3","10", function(err, response){
+            expect(err).to.have.property('message').to.equal('Selection is not valid, Selection should be positive integer');
+            done();
+        })
+    });
+
+    it("should throw error when selection value is not the positive integer in differnt order", function(done) {
        validate("E","2,0","10", function(err, response){
             expect(err).to.have.property('message').to.equal('Selection is not valid, Selection should be positive integer');
             done();
         })
     });
 
-    it("should throw error when selction value is not the positive integer", function(done) {
-       validate("E","2,0","10", function(err, response){
-            expect(err).to.have.property('message').to.equal('Selection is not valid, Selection should be positive integer');
-            done();
-        })
-    });
-
-    it("should throw error when stake value is not the positive integer", function(done) {
+    it("should throw error when stake value is not the positive integer but a float", function(done) {
        validate("E","2,9","-10", function(err, response){
+            expect(err).to.have.property('message').to.equal('Stake is not valid, Stake should be positive integer');
+            done();
+        })
+    });
+
+    it("should throw error when stake value is not the positive integer but floating point", function(done) {
+       validate("E","2,9","10.8", function(err, response){
             expect(err).to.have.property('message').to.equal('Stake is not valid, Stake should be positive integer');
             done();
         })

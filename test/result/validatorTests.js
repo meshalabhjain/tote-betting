@@ -24,7 +24,7 @@ describe("Running tests for result validator", function() {
     });
 
 
-    it.skip("should throw error when any of argument is not a positive interger but floating point number", function(done) {
+    it("should throw error when any of argument is not a positive interger but floating point number", function(done) {
        validate("1","5","6.3", function(err, response){
             expect(err).to.have.property('message').to.equal('Result positions should be positive intergers');
             done();
