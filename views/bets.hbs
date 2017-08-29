@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Welcome to tote betting app</h1>
+<p>The format of bets is Bet:&ltproduct&gt:&ltselections&gt:&ltstake&gt
+<br> where &ltproduct&gt is one of W, P, E
+<br> &ltselection&gt is either a single runner number (e.g. 4 ) for Win and Place, or two runner numbers (e.g. 4,3) for Exacta
+<br> &ltstake&gt is an amount in whole dollars (e.g. 35)
+<br> For example:
+<br> Bet:W:3:5 is a $5 bet on horse 3 to win
+<br> Bet:P:2:10 is a $10 bet on horse 2 to come first, second or third
+<br> Bet:E:5,7:15 is a $15 bet on horses 5 and 7 to come first and second in that order </p>
+
+<form action="/races/{{raceId}}/bets" method="post">
+  Please submit your bet :<br>
+  <input type="text" name="bet" value="">
+  <br><br>
+  <input type="submit" value="Sumbit">
+</form>
+{{#if error}}
+  <p>{{error.message}}</p>
+{{/if}}
+<p>You can always Bet more by sumbiting the bet again</p>
+<p>
+  <a href="/races/{{raceId}}/results">Click here to enter results and check dividends</a>
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Welcome to tote betting app</h1>
+<p>The format of the results is Result:&ltfirst&gt:&ltsecond&gt:&ltthird&gt.
+<br> For example:
+<br> Result:5:3:8 represents a race where horse 5 finished first, horse 3 finished second and horse 8 finished third.
+</p>
+
+<form action="/races/{{raceId}}/results" method="post">
+  Please submit result :<br>
+  <input type="text" name="result" value="">
+  <br><br>
+  <input type="submit" value="Sumbit">
+</form>
+{{#if error}}
+  <p>{{error.message}}</p>
+{{/if}}
+
+<h2>Output</h2>
+{{#each output}}
+   {{this}} <br>
+{{/each}}
+<p>
+  <a href="/">Start a new race</a>
+</p>
+
+
+</body>
+</html>

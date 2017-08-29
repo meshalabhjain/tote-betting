@@ -1,0 +1,23 @@
+{
+  "name": "tote-betting-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "express": "~4.15.2",
+    "hbs": "~4.0.1",
+    "is-positive-integer": "^1.1.1",
+    "jsonfile": "^3.0.1",
+    "lodash": "^4.17.4",
+    "uniqid": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0"
+  }
+}
