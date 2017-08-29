@@ -11,9 +11,9 @@ router.post('/races/:raceId/bets', function(req, res){
   var parsedBet = utils.parseBet(betString);
   Bet.create(parsedBet.product, parsedBet.selection, parsedBet.stake, req.params.raceId, function(err, bet){
     if(err){
-      res.render('bets', {error: err, raceId: bet.raceId});
+      res.render('bets', {error: err, raceId: req.params.raceId});
     }
-    res.render('bets', {raceId: bet.raceId});
+    res.render('bets', {raceId: req.params.raceId});
   })
 });
 
