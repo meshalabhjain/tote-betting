@@ -38,17 +38,17 @@ Please follow the below steps-
 
 Application takes two inputs - Bet and result
 ### Bet
-The format of bets is 'Bet:<product>:<selections>:<stake>' 
-where '<product>' is one of W, P, E 
-'<selection>' is either a single runner number (e.g. 4 ) for Win and Place, or two runner numbers (e.g. 4,3) for Exacta 
-'<stake>' is an amount in whole dollars (e.g. 35)
+The format of bets is Bet:\<product\>:\<selections\>:\<stake\> 
+where \<product\> is one of W, P, E 
+\<selection\> is either a single runner number (e.g. 4 ) for Win and Place, or two runner numbers (e.g. 4,3) for Exacta 
+\<stake\> is an amount in whole dollars (e.g. 35)
 **For example**: 
  - Bet:W:3:5 is a $5 bet on horse 3 to win 
  - Bet:P:2:10 is a $10 bet on horse 2 to come first, second or third 
  - Bet:E:5,7:15 is a $15 bet on horses 5 and 7 to come first and second in that order
 
 ### Result
-The format of the results is 'Result:<first>:<second>:<third>'. 
+The format of the results is Result:\<first\>:\<second\>:\<third>\'. 
 For example: 
 Result:5:3:8 represents a race where horse 5 finished first, horse 3 finished second and horse 8 finished third.
 
@@ -57,13 +57,8 @@ Result:5:3:8 represents a race where horse 5 finished first, horse 3 finished se
 
 # Output
 Dividends are shown following format on the results page
-'<product>:<winning selection>:<dividend>'
+\<product\>:\<winning selection\>:\<dividend\>
 
 **For example**:
-``` 
+
 W:2:$2.61 # Win bet on horse 2 yields $2.61
-P:2:$1.06 # Place bet on horse 2 yields $1.06
-P:3:$1.27 # Place bet on horse 3 yields $1.27
-P:1:$2.13 # Place bet on horse 1 yields $2.13
-E:2,3:$2.43 # Exacta on horses 2,3 yields $2.43
-```
